@@ -6,7 +6,7 @@ const app = express();
 
 const productCtrl = require('./productCtrl');
 
-app.use( bodyParser() );
+app.use( bodyParser.json() );
 app.use( cors() );
 
 app.get( '/api/products', productCtrl.get_products )
